@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <include file="changesets/changelogReflected.xml"/>
+    <changeSet author="oohor@softserveinc.com" id="version_bump_1.0.0">
+        <tagDatabase tag="version_1.0.0"/>
+    </changeSet>
+
+    <include file="changesets/addTierOverrideColumn.xml"/>
+    <changeSet author="oohor@softserveinc.com" id="version_bump_1.0.1">
+        <tagDatabase tag="version_1.0.1"/>
+    </changeSet>
+
+    <include file="changesets/renameAggregateBuUUIDColumn.xml"/>
+    <changeSet author="oohor@softserveinc.com" id="version_bump_1.0.2">
+        <tagDatabase tag="version_1.0.2"/>
+    </changeSet>
+</databaseChangeLog>

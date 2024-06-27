@@ -1,0 +1,283 @@
+<div class="section" id="module-service_api.resources.arrangement_resources">
+ <span id="arrangement-resource">
+ </span>
+ <h1>
+  Arrangement resource
+  <a class="headerlink" href="#module-service_api.resources.arrangement_resources" title="Permalink to this headline">
+   ¶
+  </a>
+ </h1>
+ <p>
+  This module contains endpoint for tier override.
+ </p>
+ <dl class="class">
+  <dt id="service_api.resources.arrangement_resources.TierOverride">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.arrangement_resources.
+   </code>
+   <code class="sig-name descname">
+    TierOverride
+   </code>
+   <a class="headerlink" href="#service_api.resources.arrangement_resources.TierOverride" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains method which is endpoint for getting info about tier override.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.arrangement_resources.TierOverride.get">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      get
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     ,
+     <em class="sig-param">
+      project_id
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.arrangement_resources.TierOverride.get" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Gets information about tier override.
+     </p>
+     <br/>
+     <br/>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <ul class="simple">
+        <li>
+         <p>
+          <strong>
+           request
+          </strong>
+          – Instance of sanic.request.Request class.
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           project_id
+          </strong>
+          – Id of project.
+         </p>
+        </li>
+       </ul>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        Information about tiers override which are available and HTTP status code 200.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="get">
+      <dt id="get--rfadjustments-v1-tier_override--project_id-uuid-">
+       <code class="sig-name descname">
+        GET
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/tier_override/&lt;project_id:uuid&gt;
+       </code>
+       <a class="headerlink" href="#get--rfadjustments-v1-tier_override--project_id-uuid-" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>GET /tier_override/27b82bb2-4262-4d04-ae48-54e7b08f7d21&amp;filter=price_group_uuid+eq+62c9b2dd-4e05-40aa-aaa3-978a6470d770&amp;filter=product_uuid+eq+222f648a-ac6e-11e9-9258-0242640f0020 HTTP/1.1
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+      "tier_id":544,
+      "tier_name":"Tier 1",
+      "values":[{"earliest_date":"2000-01-01","latest_date":null,"value":2}]
+  },
+  {
+      "tier_id":345,
+      "tier_name":"Tier 2",
+      "values":[{"earliest_date":"2000-01-01","latest_date":null,"value":5}]
+  },
+  {
+      "tier_id":354,
+      "tier_name":"Tier3",
+      "values":[{"earliest_date":"2000-01-01","latest_date":null,"value":10}]
+  }
+]
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">
+             Authorization
+            </a>
+            – Session ID 1020U96l9f_RzG4wVwSriAs7A
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+</div>

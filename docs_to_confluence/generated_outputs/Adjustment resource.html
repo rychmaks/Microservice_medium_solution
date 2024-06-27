@@ -1,0 +1,2551 @@
+<div class="section" id="module-service_api.resources.adjustment_resources">
+ <span id="adjustment-resource">
+ </span>
+ <h1>
+  Adjustment resource
+  <a class="headerlink" href="#module-service_api.resources.adjustment_resources" title="Permalink to this headline">
+   ¶
+  </a>
+ </h1>
+ <p>
+  This module contains endpoints for adjustments.
+ </p>
+ <dl class="class">
+  <dt id="service_api.resources.adjustment_resources.AdjustmentResource">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.adjustment_resources.
+   </code>
+   <code class="sig-name descname">
+    AdjustmentResource
+   </code>
+   <a class="headerlink" href="#service_api.resources.adjustment_resources.AdjustmentResource" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains methods which are endpoints for getting and creating adjustment with specified id.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.AdjustmentResource.get">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      get
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     ,
+     <em class="sig-param">
+      adjustment_id
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.AdjustmentResource.get" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Returns adjustment with specified id.
+     </p>
+     <br/>
+     <br/>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <ul class="simple">
+        <li>
+         <p>
+          <strong>
+           request
+          </strong>
+          – Instance of sanic.request.Request class.
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           adjustment_id
+          </strong>
+          – id of adjustment.
+         </p>
+        </li>
+       </ul>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        HTTP status code 200 and dict with information about adjustment with specified id.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="get">
+      <dt id="get--rfadjustments-v1-adjustments--adjustment_id-uuid-">
+       <code class="sig-name descname">
+        GET
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/adjustments/&lt;adjustment_id:uuid&gt;
+       </code>
+       <a class="headerlink" href="#get--rfadjustments-v1-adjustments--adjustment_id-uuid-" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>GET /rfadjustments/v1/adjustments/6c6c7e0a-0e52-46bc-a794-5ffb484bfdac HTTP/1.1
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "id": "6c6c7e0a-0e52-46bc-a794-5ffb484bfdac",
+    "project_uuid": "27b82bb2-4262-4d04-ae48-54e7b08f7d21",
+    "price_group_uuid": "62c9b2dd-4e05-40aa-aaa3-978a6470d770",
+    "bu_uuid": "c067b939-f64b-4235-84e8-c843e1133d1a",
+    "product_uuid": "222f648a-ac6e-11e9-9258-0242640f0020",
+    "adjustment_value": 2232.0,
+    "tier_override": null,
+    "comment": "ccvvcvcqqq",
+    "user": "rf_analyst@cis-cust.lan",
+    "user_full_name": "RF Analyst",
+    "status": "Not Applied",
+    "updated_at": "2019-10-28T07:40:33.285310"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.AdjustmentResource.put">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      put
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     ,
+     <em class="sig-param">
+      adjustment_id
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.AdjustmentResource.put" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Updates adjustment with specified id.
+     </p>
+     <br/>
+     <br/>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <ul class="simple">
+        <li>
+         <p>
+          <strong>
+           request
+          </strong>
+          – Instance of sanic.request.Request class.
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           adjustment_id
+          </strong>
+          – id of adjustment.
+         </p>
+        </li>
+       </ul>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        HTTP status code 200 and dict with information about adjustment which was updated.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="put">
+      <dt id="put--rfadjustments-v1-adjustments--adjustment_id-uuid-">
+       <code class="sig-name descname">
+        PUT
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/adjustments/&lt;adjustment_id:uuid&gt;
+       </code>
+       <a class="headerlink" href="#put--rfadjustments-v1-adjustments--adjustment_id-uuid-" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request JSON Array of Objects
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <strong>
+             adjustment_value
+            </strong>
+            (
+            <em>
+             decimal|NoneType
+            </em>
+            ) – Value for manual override.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             cal_total_rebate_amt
+            </strong>
+            (
+            <em>
+             decimal
+            </em>
+            ) – Amount of total rebate.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             comment
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Comment for adjustment.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             project_type
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Type of project.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             record_hash
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Hash of record.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             tier_id
+            </strong>
+            (
+            <em>
+             decimal|NonType
+            </em>
+            ) – Id of tier.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             tier_override
+            </strong>
+            (
+            <em>
+             dictionary|NoneType
+            </em>
+            ) – Information about tier override.
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>PUT /rfadjustments/v1/adjustments/6c6c7e0a-0e52-46bc-a794-5ffb484bfdac HTTP/1.1
+
+{
+    "adjustment_value": 1113,
+    "cal_total_rebate_amt": 11,
+    "comment": "qwer",
+    "project_type": "sb_rebate",
+    "record_hash": "0edb2415fb4b4e75e81833a61698bcf9",
+    "tier_id": null,
+    "tier_override": null
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.2">
+             Accept
+            </a>
+            – application/json, text/plain,
+            <em>
+             /
+            </em>
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">
+             Authorization
+            </a>
+            – SessionID 102AX3b_uMTTMmQDe-iqeZCMA
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">
+             Content-Type
+            </a>
+            – application/json
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             x-projecttypes-group
+            </em>
+            – rf
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-Timezone
+            </em>
+            – Asia/Vladivostok
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+      "id": "6c6c7e0a-0e52-46bc-a794-5ffb484bfdac",
+      "project_uuid": "27b82bb2-4262-4d04-ae48-54e7b08f7d21",
+      "price_group_uuid": "62c9b2dd-4e05-40aa-aaa3-978a6470d770",
+      "bu_uuid": "c067b939-f64b-4235-84e8-c843e1133d1a",
+      "product_uuid": "222f648a-ac6e-11e9-9258-0242640f0020",
+      "adjustment_value": 1113.0,
+      "tier_override": null,
+      "comment": "qwer",
+      "user": "rf_analyst@cis-cust.lan",
+      "user_full_name": "RF Analyst",
+      "status": "Not Applied",
+      "updated_at": "2019-10-28T08:08:09.599142"
+  }
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Status Codes
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+ <dl class="class">
+  <dt id="service_api.resources.adjustment_resources.AdjustmentsResource">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.adjustment_resources.
+   </code>
+   <code class="sig-name descname">
+    AdjustmentsResource
+   </code>
+   <a class="headerlink" href="#service_api.resources.adjustment_resources.AdjustmentsResource" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains methods which are endpoints for getting and creating adjustments.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.AdjustmentsResource.get">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      get
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.AdjustmentsResource.get" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Returns adjustments and sets into headers data about pagination.
+     </p>
+     <br/>
+     <br/>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <p>
+        <strong>
+         request
+        </strong>
+        – Instance of sanic.request.Request class.
+       </p>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        List with information about adjustments, HTTP status code 200 and headers with such parameters as
+        <cite>
+         X-Pagination-Current-Page
+        </cite>
+        ,
+        <cite>
+         X-Pagination-Per-Page
+        </cite>
+        ,
+        <cite>
+         X-Pagination-Total-Count
+        </cite>
+        .
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="get">
+      <dt id="get--rfadjustments-v1-adjustments">
+       <code class="sig-name descname">
+        GET
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/adjustments
+       </code>
+       <a class="headerlink" href="#get--rfadjustments-v1-adjustments" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>GET /rfadjustments/v1/adjustments/6c6c7e0a-0e52-46bc-a794-5ffb484bfdac HTTP/1.1
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+    {
+        "id": "6c6c7e0a-0e52-46bc-a794-5ffb484bfdac",
+        "project_uuid": "27b82bb2-4262-4d04-ae48-54e7b08f7d21",
+        "price_group_uuid": "62c9b2dd-4e05-40aa-aaa3-978a6470d770",
+        "bu_uuid": "c067b939-f64b-4235-84e8-c843e1133d1a",
+        "product_uuid": "222f648a-ac6e-11e9-9258-0242640f0020",
+        "adjustment_value": 2232.0,
+        "tier_override": null,
+        "comment": "ccvvcvcqqq",
+        "user": "rf_analyst@cis-cust.lan",
+        "user_full_name": "RF Analyst",
+        "status": "Not Applied",
+        "updated_at": "2019-10-28T07:40:33.285310"
+    },
+    {
+        "id": "1911418f-10d7-4d9a-918c-0767e7b98ce8",
+        "project_uuid": "27b82bb2-4262-4d04-ae48-54e7b08f7d21",
+        "price_group_uuid": "62c9b2dd-4e05-40aa-aaa3-978a6470d770",
+        "bu_uuid": "f998ceaf-4fd8-4fbc-ae87-75ce1046f88c",
+        "product_uuid": "222f648a-ac6e-11e9-9258-0242640f0020",
+        "adjustment_value": 1234.0,
+        "tier_override": null,
+        "comment": "ewqedsad",
+        "user": "rf_analyst@cis-cust.lan",
+        "user_full_name": "RF Analyst",
+        "status": "Not Applied",
+        "updated_at": "2019-10-28T07:48:36.235583"
+    }
+]
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Response Headers
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <em>
+             X-Pagination-Current-Page
+            </em>
+            – 1
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-Pagination-Per-Page
+            </em>
+            – 2
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-Pagination-Total-Count
+            </em>
+            – 2
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-odd">
+         Status Codes
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.AdjustmentsResource.post">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      post
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.AdjustmentsResource.post" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Creates new adjustment.
+     </p>
+     <br/>
+     <br/>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <p>
+        <strong>
+         request
+        </strong>
+        – Instance of sanic.request.Request class.
+       </p>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        All information about new adjustment and HTTP status code 201.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="post">
+      <dt id="post--rfadjustments-v1-adjustments">
+       <code class="sig-name descname">
+        POST
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/adjustments
+       </code>
+       <a class="headerlink" href="#post--rfadjustments-v1-adjustments" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request JSON Array of Objects
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <strong>
+             adjustment_value
+            </strong>
+            (
+            <em>
+             decimal|NoneType
+            </em>
+            ) – Value for manual override.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             bu_uuid
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Uuid of bu.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             cal_total_rebate_amt
+            </strong>
+            (
+            <em>
+             decimal
+            </em>
+            ) – Amount of total rebate.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             comment
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Comment for adjustment.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             price_group_uuid
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Uuid of price group.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             product_uuid
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Uuid of product.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             project_type
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Type of project.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             project_uuid
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Uuid of project.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             record_hash
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Hash of record.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             Tier_id
+            </strong>
+            (
+            <em>
+             decimal|NonType
+            </em>
+            ) – Id of tier.
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             tier_override
+            </strong>
+            (
+            <em>
+             dictionary|NoneType
+            </em>
+            ) – Information about tier override.
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>POST /rfadjustments/v1/adjustments HTTP/1.1
+
+{
+    "adjustment_value": 111,
+    "comment": "zzzzzz",
+    "record_hash": "b3bbce0e2cefcdb60bf89d7940614425",
+    "tier_override": null,
+    "tier_id": null,
+    "cal_total_rebate_amt": 14.96,
+    "project_type": "sb_rebate",
+    "product_uuid": "222f648a-ac6e-11e9-9258-0242640f0020",
+    "bu_uuid": "f998ceaf-4fd8-4fbc-ae87-75ce1046f88c",
+    "project_uuid": "27b82bb2-4262-4d04-ae48-54e7b08f7d21",
+    "price_group_uuid": "62c9b2dd-4e05-40aa-aaa3-978a6470d770"
+ }
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+    "id": "4bf40f89-af62-49b8-b7f6-21d4ad1123fa",
+    "project_uuid": "27b82bb2-4262-4d04-ae48-54e7b08f7d21",
+    "price_group_uuid": "62c9b2dd-4e05-40aa-aaa3-978a6470d770",
+    "bu_uuid": "f998ceaf-4fd8-4fbc-ae87-75ce1046f88c",
+    "product_uuid": "222f648a-ac6e-11e9-9258-0242640f0020",
+    "adjustment_value": 111.0,
+    "tier_override": null,
+    "comment": "zzzzzz",
+    "user": "rf_analyst@cis-cust.lan",
+    "user_full_name": "RF Analyst",
+    "status": "Not Applied",
+    "updated_at": "2019-10-25T11:30:36.791628"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.2">
+             Accept
+            </a>
+            – application/json, text/plain,
+            <em>
+             /
+            </em>
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">
+             Authorization
+            </a>
+            – SessionID 102AX3b_uMTTMmQDe-iqeZCMA
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">
+             Content-Type
+            </a>
+            – application/json
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             x-projecttypes-group
+            </em>
+            – rf
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-Timezone
+            </em>
+            – Asia/Vladivostok
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.2">
+             201 Created
+            </a>
+            – Created
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+ <dl class="class">
+  <dt id="service_api.resources.adjustment_resources.ApplyAdjustment">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.adjustment_resources.
+   </code>
+   <code class="sig-name descname">
+    ApplyAdjustment
+   </code>
+   <a class="headerlink" href="#service_api.resources.adjustment_resources.ApplyAdjustment" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains method which is endpoint for applying not applied adjustments.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.ApplyAdjustment.post">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      post
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.ApplyAdjustment.post" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Applies adjustments for project.
+     </p>
+     <br/>
+     <br/>
+     <p>
+      This method applies adjustments with status ‘Not Applied’ for project.
+     </p>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <p>
+        <strong>
+         request
+        </strong>
+        – Instance of sanic.request.Request class.
+       </p>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        Message that not applied adjustments have been applied and HTTP status code 200.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="post">
+      <dt id="post--rfadjustments-v1-mark_adjustments_as_applied">
+       <code class="sig-name descname">
+        POST
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/mark_adjustments_as_applied
+       </code>
+       <a class="headerlink" href="#post--rfadjustments-v1-mark_adjustments_as_applied" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request JSON Array of Objects
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <strong>
+             project_uuid
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Uuid of project.
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>POST /rfadjustments/v1/mark_adjustments_as_applied HTTP/1.1
+
+{
+    'project_uuid': 'b4d1ce21-347d-40b8-b94-31d3511e9790'
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "message": "Adjustments have been applied"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.2">
+             Accept
+            </a>
+            – application/json, text/plain,
+            <em>
+             /
+            </em>
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">
+             Authorization
+            </a>
+            – SessionID 102AX3b_uMTTMmQDe-iqeZCMA
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">
+             Content-Type
+            </a>
+            – application/json
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             x-projecttypes-group
+            </em>
+            – rf
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-Timezone
+            </em>
+            – Asia/Vladivostok
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+ <dl class="class">
+  <dt id="service_api.resources.adjustment_resources.DeleteNotAppliedAdjustments">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.adjustment_resources.
+   </code>
+   <code class="sig-name descname">
+    DeleteNotAppliedAdjustments
+   </code>
+   <a class="headerlink" href="#service_api.resources.adjustment_resources.DeleteNotAppliedAdjustments" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains method which is endpoint for deleting not applied adjustments.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.DeleteNotAppliedAdjustments.post">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      post
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.DeleteNotAppliedAdjustments.post" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Deletes not applied adjustments.
+     </p>
+     <br/>
+     <br/>
+     <p>
+      This method deletes adjustments which wasn’t applied in project.
+     </p>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <p>
+        <strong>
+         request
+        </strong>
+        – Instance of sanic.request.Request class.
+       </p>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        Message that not applied adjustments have been deleted and HTTP status code 200.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="post">
+      <dt id="post--rfadjustments-v1-delete_not_applied_overrides">
+       <code class="sig-name descname">
+        POST
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/delete_not_applied_overrides
+       </code>
+       <a class="headerlink" href="#post--rfadjustments-v1-delete_not_applied_overrides" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request JSON Array of Objects
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <strong>
+             project_uuid
+            </strong>
+            (
+            <em>
+             UUID
+            </em>
+            ) – Uuid of project.
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>POST /rfadjustments/v1/delete_not_applied_overrides HTTP/1.1
+
+{
+    'project_uuid': 'b4d1ce21-347d-40b8-b94-31d3511e9790'
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "message": "Not applied adjustments have been deleted"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.2">
+             Accept
+            </a>
+            – application/json, text/plain,
+            <em>
+             /
+            </em>
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">
+             Authorization
+            </a>
+            – SessionID 102AX3b_uMTTMmQDe-iqeZCMA
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">
+             Content-Type
+            </a>
+            – application/json
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             x-projecttypes-group
+            </em>
+            – rf
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-Timezone
+            </em>
+            – Asia/Vladivostok
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+ <dl class="class">
+  <dt id="service_api.resources.adjustment_resources.GetProjectAdjustments">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.adjustment_resources.
+   </code>
+   <code class="sig-name descname">
+    GetProjectAdjustments
+   </code>
+   <a class="headerlink" href="#service_api.resources.adjustment_resources.GetProjectAdjustments" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains method which is endpoint for getting project adjustments.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.GetProjectAdjustments.get">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      get
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     ,
+     <em class="sig-param">
+      project_id
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.GetProjectAdjustments.get" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Returns adjustments for specified project.
+     </p>
+     <br/>
+     <br/>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <ul class="simple">
+        <li>
+         <p>
+          <strong>
+           request
+          </strong>
+          – Instance of sanic.request.Request class.
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           project_id
+          </strong>
+          – id of project.
+         </p>
+        </li>
+       </ul>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        All information about adjustments for specified project and HTTP status code 200.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="get">
+      <dt id="get--rfadjustments-v1-project_adjustments--project_id-uuid-">
+       <code class="sig-name descname">
+        GET
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/project_adjustments/&lt;project_id:uuid&gt;
+       </code>
+       <a class="headerlink" href="#get--rfadjustments-v1-project_adjustments--project_id-uuid-" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>GET /rfadjustments/v1/project_adjustments/27b82bb2-4262-4d04-ae48-54e7b08f7d21 HTTP/1.1
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+      "id": "6c6c7e0a-0e52-46bc-a794-5ffb484bfdac",
+      "project_uuid": "27b82bb2-4262-4d04-ae48-54e7b08f7d21",
+      "price_group_uuid": "62c9b2dd-4e05-40aa-aaa3-978a6470d770",
+      "bu_uuid": "c067b939-f64b-4235-84e8-c843e1133d1a",
+      "product_uuid": "222f648a-ac6e-11e9-9258-0242640f0020",
+      "adjustment_value": 2232.0,
+      "tier_override": null,
+      "comment": "ccvvcvcqqq",
+      "user": "rf_analyst@cis-cust.lan",
+      "user_full_name": "RF Analyst",
+      "status": "Not Applied",
+      "updated_at": "2019-10-28T07:40:33.285310"
+  }
+]
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+ <dl class="class">
+  <dt id="service_api.resources.adjustment_resources.RemoveDeprecatedAdjustments">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.adjustment_resources.
+   </code>
+   <code class="sig-name descname">
+    RemoveDeprecatedAdjustments
+   </code>
+   <a class="headerlink" href="#service_api.resources.adjustment_resources.RemoveDeprecatedAdjustments" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains method which is endpoint for deleting deprecated adjustments.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.adjustment_resources.RemoveDeprecatedAdjustments.post">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      post
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.adjustment_resources.RemoveDeprecatedAdjustments.post" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Removes deprecated adjustments.
+     </p>
+     <br/>
+     <br/>
+     <p>
+      This method deletes applied adjustment if for the same combination of
+project_uuid, price_group_uuid, bu_uuid and product_uuid exist adjustment with status ‘Not Applied’.
+     </p>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <p>
+        <strong>
+         request
+        </strong>
+        – Instance of sanic.request.Request class.
+       </p>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        Message that deprecated adjustments have been removed and HTTP status code 200.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="post">
+      <dt id="post--rfadjustments-v1-adjustments">
+       <code class="sig-name descname">
+        POST
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/adjustments
+       </code>
+       <a class="headerlink" href="#post--rfadjustments-v1-adjustments" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request JSON Array of Objects
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <strong>
+             project_uuid
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – Uuid of project.
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>POST /rfadjustments/v1/adjustments HTTP/1.1
+
+{
+    'project_uuid': 'b4d1ce21-347d-40b8-b94-31d3511e9790'
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 Ok
+Content-Type: application/json
+
+{
+    "message": "Deprecated adjustments have been removed"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.2">
+             Accept
+            </a>
+            – application/json, text/plain,
+            <em>
+             /
+            </em>
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">
+             Authorization
+            </a>
+            – SessionID 102AX3b_uMTTMmQDe-iqeZCMA
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">
+             Content-Type
+            </a>
+            – application/json
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-client
+            </em>
+            – umbrella
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             x-projecttypes-group
+            </em>
+            – rf
+           </p>
+          </li>
+          <li>
+           <p>
+            <em>
+             X-Timezone
+            </em>
+            – Asia/Vladivostok
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+</div>

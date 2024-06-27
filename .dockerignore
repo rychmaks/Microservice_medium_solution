@@ -1,0 +1,8 @@
+.flake8
+**/.git*
+**/*pycache*
+/tests
+**/fixtures
+*.egg-info
+.coveragerc
+.python-version

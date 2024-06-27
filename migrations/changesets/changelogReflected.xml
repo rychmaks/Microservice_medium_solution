@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="oohor@softserveinc.com" id="create_table_adjustments">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists schemaName="public" tableName="adjustments"/>
+            </not>
+        </preConditions>
+        <createTable tableName="adjustments">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="project_uuid" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_group_uuid" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aggregate_bu_uuid" type="UUID"/>
+            <column name="product_uuid" type="UUID"/>
+            <column name="adjustment_value" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comment" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_full_name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

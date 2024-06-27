@@ -1,0 +1,24 @@
+[run]
+ omit =
+    venv/*,
+    tests/*,
+    pip-download-cache/*,
+    */site-packages/*,
+    */bin/pytest,
+    /usr/*,
+    */fixtures/*
+
+[report]
+ fail_under = 96
+ omit =
+    venv/*,
+    tests/*,
+    /home/*,
+    pip-download-cache/*,
+    */site-packages/*,
+    */bin/pytest,
+    /usr/*,
+    */fixtures/*
+
+ exclude_lines =
+    pragma: no cover

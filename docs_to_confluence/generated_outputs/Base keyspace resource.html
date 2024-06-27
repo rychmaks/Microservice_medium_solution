@@ -1,0 +1,357 @@
+<div class="section" id="module-service_api.resources.base_keyspace">
+ <span id="base-keyspace-resource">
+ </span>
+ <h1>
+  Base keyspace resource
+  <a class="headerlink" href="#module-service_api.resources.base_keyspace" title="Permalink to this headline">
+   ¶
+  </a>
+ </h1>
+ <p>
+  This module contains endpoint for key space resources.
+ </p>
+ <dl class="class">
+  <dt id="service_api.resources.base_keyspace.KeyspaceResource">
+   <em class="property">
+    class
+   </em>
+   <code class="sig-prename descclassname">
+    service_api.resources.base_keyspace.
+   </code>
+   <code class="sig-name descname">
+    KeyspaceResource
+   </code>
+   <a class="headerlink" href="#service_api.resources.base_keyspace.KeyspaceResource" title="Permalink to this definition">
+    ¶
+   </a>
+  </dt>
+  <dd>
+   <p>
+    This class contains method which is endpoint for creating database.
+   </p>
+   <dl class="method">
+    <dt id="service_api.resources.base_keyspace.KeyspaceResource.post">
+     <em class="property">
+      async
+     </em>
+     <code class="sig-name descname">
+      post
+     </code>
+     <span class="sig-paren">
+      (
+     </span>
+     <em class="sig-param">
+      request
+     </em>
+     <span class="sig-paren">
+      )
+     </span>
+     <a class="headerlink" href="#service_api.resources.base_keyspace.KeyspaceResource.post" title="Permalink to this definition">
+      ¶
+     </a>
+    </dt>
+    <dd>
+     <p>
+      Creates a database.
+     </p>
+     <br/>
+     <br/>
+     <br/>
+     <dl class="field-list simple">
+      <dt class="field-odd">
+       Parameters
+      </dt>
+      <dd class="field-odd">
+       <p>
+        <strong>
+         request
+        </strong>
+        – Instance of sanic.request.Request class.
+       </p>
+      </dd>
+      <dt class="field-even">
+       Returns
+      </dt>
+      <dd class="field-even">
+       <p>
+        HTTP status code 200 and message that database exist
+or HTTP status code 201 and message with information that database was created,
+if such database wasn’t exist.
+       </p>
+      </dd>
+     </dl>
+     <p class="rubric">
+      Example
+     </p>
+     <dl class="post">
+      <dt id="post--rfadjustments-v1-keyspaces">
+       <code class="sig-name descname">
+        POST
+       </code>
+       <code class="sig-name descname">
+        /rfadjustments/v1/keyspaces
+       </code>
+       <a class="headerlink" href="#post--rfadjustments-v1-keyspaces" title="Permalink to this definition">
+        ¶
+       </a>
+      </dt>
+      <dd>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request JSON Array of Objects
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <strong>
+             client_short_name
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – name of client
+           </p>
+          </li>
+          <li>
+           <p>
+            <strong>
+             hosts
+            </strong>
+            (
+            <em>
+             string
+            </em>
+            ) – host
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+       <p>
+        <strong>
+         Example request
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>POST /rfadjustments/v1/keyspaces HTTP/1.1
+
+{
+    "client_short_name": "umbrella",
+    "hosts": "10.2.2.144"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <p>
+        <strong>
+         Example response
+        </strong>
+        :
+       </p>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "message": "Database 'rfadjustments_umbrella' exists"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="highlight-http notranslate">
+        <div class="highlight">
+         <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code" style="border-width: 1px;">
+          <div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+           <b class="code-title">
+            JSON Code Block
+           </b>
+           <span class="collapse-source expand-control" style="">
+            <span class="expand-control-icon icon expanded">
+            </span>
+            <span class="expand-control-text">
+             Collapse source
+            </span>
+           </span>
+          </div>
+          <div class="codeContent panelContent pdl hide-toolbar show-border-top">
+           <div>
+            <div class="syntaxhighlighter sh-confluence nogutter js expanded" id="highlighter_327878">
+             <div class="toolbar">
+              <span>
+               <a class="toolbar_item command_expandSource expandSource" href="#">
+                expand
+  source
+               </a>
+              </span>
+              <span>
+               <a class="toolbar_item command_help help" href="#">
+                ?
+               </a>
+              </span>
+             </div>
+             <table border="0" cellspacing="0" ellpadding="0">
+              <tbody>
+               <tr>
+                <td class="code">
+                 <pre>HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+    "message": "Database 'rfadjustments_umbrella' successfully created"
+}
+</pre>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <dl class="field-list simple">
+        <dt class="field-odd">
+         Request Headers
+        </dt>
+        <dd class="field-odd">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.2">
+             Accept
+            </a>
+            – application/json, text/plain,
+            <em>
+             /
+            </em>
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">
+             Content-Type
+            </a>
+            – application/json
+           </p>
+          </li>
+         </ul>
+        </dd>
+        <dt class="field-even">
+         Status Codes
+        </dt>
+        <dd class="field-even">
+         <ul class="simple">
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">
+             200 OK
+            </a>
+            – OK
+           </p>
+          </li>
+          <li>
+           <p>
+            <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.2">
+             201 Created
+            </a>
+            – Created
+           </p>
+          </li>
+         </ul>
+        </dd>
+       </dl>
+      </dd>
+     </dl>
+    </dd>
+   </dl>
+  </dd>
+ </dl>
+</div>

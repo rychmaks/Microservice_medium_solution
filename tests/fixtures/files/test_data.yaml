@@ -1,0 +1,256 @@
+dataload:
+  adjustments:
+    - id: '32d256ae-a704-4bd2-aa2a-085d34ae4df2'
+      project_uuid: 'b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d51'
+      price_group_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d71'
+      bu_uuid: 'b5cd5ce6-4c46-4e6d-1111-7df38fdd7d51'
+      product_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d51'
+      adjustment_value: 500
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'
+
+    - id: '32d256ae-a704-4bd2-aa2a-085d34ae4df3'
+      project_uuid: 'b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d53'
+      price_group_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d71'
+      bu_uuid: 'b5cd5ce6-4c46-4e6d-1111-7df38fdd7d51'
+      product_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d51'
+      adjustment_value: 500
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'
+
+    - id: '32d256ae-a704-4bd2-aa2a-085d34ae4df4'
+      project_uuid: 'b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d54'
+      price_group_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d71'
+      bu_uuid: 'b5cd5ce6-4c46-4e6d-1111-7df38fdd7d51'
+      product_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d51'
+      adjustment_value: 500
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'
+
+    - id: '32d256ae-a704-4bd2-aa2a-085d34ae4df5'
+      project_uuid: 'b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d54'
+      price_group_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d71'
+      bu_uuid: 'b5cd5ce6-4c46-4e6d-1111-7df38fdd7d51'
+      product_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d51'
+      adjustment_value: 500
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'
+
+    - id: '32d256ae-a704-4bd2-aa2a-085d34ae4df6'
+      project_uuid: 'b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d54'
+      price_group_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d71'
+      bu_uuid: 'b5cd5ce6-4c46-4e6d-1111-7df38fdd7d51'
+      product_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d51'
+      adjustment_value: 500
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'
+
+    - id: '613197bd-0e33-4ff9-80a8-d4114a210b71'
+      project_uuid: 'aa2bd902-34ef-43ea-a13a-5e983ed72830'
+      price_group_uuid: '99969820-e405-404a-b949-e67ee8ad6347'
+      bu_uuid: '4e573553-53d0-46c6-b928-1e2434e87f91'
+      product_uuid: '2a41155b-ed7a-40fd-8afc-658f04cb3ea3'
+      adjustment_value: 100
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'
+
+    - id: '613197bd-0e33-4ff9-80a8-d4114a210b72'
+      project_uuid: 'aa2bd902-34ef-43ea-a13a-5e983ed72830'
+      price_group_uuid: '99969820-e405-404a-b949-e67ee8ad6347'
+      bu_uuid: '4e573553-53d0-46c6-b928-1e2434e87f91'
+      product_uuid: '2a41155b-ed7a-40fd-8afc-658f04cb3ea3'
+      adjustment_value: 200
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Applied'
+      updated_at: '2018-08-26T11:11:41.231740+00:00'
+
+    - id: '613197bd-0e33-4ff9-80a8-d4114a210b73'
+      project_uuid: 'aa2bd902-34ef-43ea-a13a-5e983ed72830'
+      price_group_uuid: '99969820-e405-404a-b949-e67ee8ad6347'
+      bu_uuid: '4e573553-53d0-46c6-b928-1e2434e87f91'
+      product_uuid: '2a41155b-ed7a-40fd-8afc-658f04cb3ea3'
+      adjustment_value: 300
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Applied'
+      updated_at: '2018-08-26T11:11:42.231740+00:00'
+
+
+    - id: '613197bd-0e33-4ff9-80a8-d4114a210b74'
+      project_uuid: 'aa2bd902-34ef-43ea-a13a-5e983ed72830'
+      price_group_uuid: '99969820-e405-404a-b949-e67ee8ad6347'
+      bu_uuid: '4e573553-53d0-46c6-b928-1e2434e87f91'
+      product_uuid: '2a41155b-ed7a-40fd-8afc-658f04cb3ea3'
+      adjustment_value: 400
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:43.231740+00:00'
+
+    - id: '613197bd-0e33-4ff9-80a8-d4114a210b75'
+      project_uuid: 'aa2bd902-34ef-43ea-a13a-5e983ed72831'
+      price_group_uuid: '99969820-e405-404a-b949-e67ee8ad6347'
+      bu_uuid: '4e573553-53d0-46c6-b928-1e2434e87f91'
+      product_uuid: '2a41155b-ed7a-40fd-8afc-658f04cb3ea3'
+      adjustment_value: 400
+      tier_override: None
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Applied'
+      updated_at: '2018-08-26T11:11:43.231740+00:00'
+
+    - id: '613197bd-0e33-4ff9-80a8-d4114a210b76'
+      project_uuid: 'aa2bd902-34ef-43ea-a13a-5e983ed72832'
+      price_group_uuid: '99969820-e405-404a-b949-e67ee8ad6347'
+      bu_uuid: '4e573553-53d0-46c6-b928-1e2434e87f91'
+      product_uuid: '2a41155b-ed7a-40fd-8afc-658f04cb3ea3'
+      adjustment_value: 400
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:43.231740+00:00'
+
+    - id: 'fcf63199-a5e7-41e5-8316-312e0e668e4d'
+      project_uuid: 'b1673d2f-ab28-448b-9722-c81e118c018b'
+      price_group_uuid: '321ec97e-88ca-4a6f-b8e3-28f5c77fb7d3'
+      bu_uuid: '358a4d20-d96c-434d-81ca-cfd301809c21'
+      product_uuid: '6757dcf3-244c-4bd3-a300-483473d1e50b'
+      adjustment_value: 400
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:43.231740+00:00'
+
+    - id: 'f8565bf3-be10-4fd7-9777-acacad0bd7f0'
+      project_uuid: 'b1673d2f-ab28-448b-9722-c81e118c018b'
+      price_group_uuid: '321ec97e-88ca-4a6f-b8e3-28f5c77fb7d3'
+      bu_uuid: '358a4d20-d96c-434d-81ca-cfd301809c21'
+      product_uuid: '6757dcf3-244c-4bd3-a300-483473d1e50b'
+      adjustment_value: 500
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-10-26T11:11:43.231740+00:00'
+
+    - id: '9145d15a-7809-4b2a-9cb3-d8a07fc508ca'
+      project_uuid: 'b1673d2f-ab28-448b-9722-c81e118c018b'
+      price_group_uuid: '321ec97e-88ca-4a6f-b8e3-28f5c77fb7d3'
+      bu_uuid: '358a4d20-d96c-434d-81ca-cfd301809c21'
+      product_uuid: '6757dcf3-244c-4bd3-a300-483473d1e50b'
+      adjustment_value: 600
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-07-26T11:11:43.231740+00:00'
+
+    - id: 'bff292e2-d4c7-4f2e-b2cc-e1d202a5f4c8'
+      project_uuid: '387bc469-2c73-4d48-9f1f-490ee8f915b9'
+      price_group_uuid: 'b029e9f8-7c82-45dd-b674-a131a074bfeb'
+      bu_uuid: 'b5ccf502-3c3b-4a30-a180-c8d6b5573e9f'
+      product_uuid: '7b69c8bf-b3c1-4a19-a7cd-654cc11ae9d5'
+      adjustment_value: 600
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-07-24T11:11:43.231740+00:00'
+
+    - id: 'ed7ad179-99eb-464c-be69-4ed0ffb449c1'
+      project_uuid: '387bc469-2c73-4d48-9f1f-490ee8f915b9'
+      price_group_uuid: 'b029e9f8-7c82-45dd-b674-a131a074bfeb'
+      bu_uuid: 'b5ccf502-3c3b-4a30-a180-c8d6b5573e9f'
+      product_uuid: '7b69c8bf-b3c1-4a19-a7cd-654cc11ae9d5'
+      adjustment_value: 400
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-07-26T11:11:43.231740+00:00'
+
+    - id: '49695d5d-5d8c-4775-b964-0a8400b54ce8'
+      project_uuid: '387bc469-2c73-4d48-9f1f-490ee8f915b9'
+      price_group_uuid: 'b029e9f8-7c82-45dd-b674-a131a074bfeb'
+      bu_uuid: 'b5ccf502-3c3b-4a30-a180-c8d6b5573e9f'
+      product_uuid: 'e6f799e8-c321-4f98-8f02-28775070f8d0'
+      adjustment_value: 300
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-07-30T11:11:43.231740+00:00'
+
+    - id: '32d256ae-a704-4bd2-aa2a-085d34ae4d11'
+      project_uuid: 'b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d51'
+      price_group_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d71'
+      bu_uuid: 'b5cd5ce6-4c46-4e6d-1111-7df38fdd7d51'
+      product_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d51'
+      adjustment_value: null
+      tier_override: {
+        "values": [{
+          "value": 10,
+          "latest_date": null,
+          "earliest_date": "2000-01-01"
+        }],
+        "tier_id": 6786,
+        "tier_name": "Tier"}
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'
+
+    - id: '32d256ae-a704-4bd2-aa2a-085d34ae4d12'
+      project_uuid: 'b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d51'
+      price_group_uuid: '321ec97e-88ca-4a6f-b8e3-28f5c77fb7d3'
+      bu_uuid: 'b5cd5ce6-4c46-4e6d-1111-7df38fdd7d51'
+      product_uuid: 'b5cd5ce6-4c46-1111-a67d-7df38fdd7d51'
+      adjustment_value: null
+      tier_override: {
+        "values": [{
+                     "value": 10,
+                     "latest_date": null,
+                     "earliest_date": "2000-01-01"
+                   }],
+        "tier_id": 6787,
+        "tier_name": "Tier"}
+      comment: 'Changed rebate to make more profit'
+      user: 'test_user_first_name@somedomain.com'
+      user_full_name: 'test_user_first_name test_user_last_name'
+      status: 'Not Applied'
+      updated_at: '2018-08-26T11:11:40.231740+00:00'

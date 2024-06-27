@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="oohor@softserveinc.com" id="add_column_tier_override" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <columnExists schemaName="public" tableName="adjustments" columnName="tier_override"/>
+            </not>
+        </preConditions>
+        <addColumn tableName="adjustments">
+            <column name="tier_override" type="JSONB"/>
+        </addColumn>
+        <dropNotNullConstraint
+                columnDataType="DECIMAL"
+                columnName="adjustment_value"
+                schemaName="public"
+                tableName="adjustments"/>
+        <rollback>
+            <addColumn tableName="adjustments">
+                <column name="tier_override" type="JSONB"/>
+            </addColumn>
+            <dropNotNullConstraint
+                    columnDataType="DECIMAL"
+                    columnName="adjustment_value"
+                    schemaName="public"
+                    tableName="adjustments"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

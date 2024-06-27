@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "6af7f39e-dc7d-44a0-a565-4f4a237457cf",
+		"name": "rfadjustments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "smoke",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/smoke/",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"smoke",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "keyspace",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hosts\": \"10.2.2.144\",\n\t\"client_short_name\": \"umbrella\"\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/keyspaces",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"keyspaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Session",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Create session response code is 200\"] = responseCode.code === 200;",
+							"if( data.sessionId ) {",
+							"    postman.setEnvironmentVariable(\"sid\", \"SessionID \" + data.sessionId);   ",
+							"}",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "{{protocol}}://{{host}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "username=john@cis-cust.lan&password=Dummy#123"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:8080/apigateway/v1/sessions",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "8080",
+					"path": [
+						"apigateway",
+						"v1",
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_adjustment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Client",
+						"value": "{{x_client}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{sid}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_uuid\": \"b5cd5ce6-4c46-1111-a67d-7df38fdd7d55\",\r\n    \"bu_uuid\": \"b5cd5ce6-4c46-4e6d-1111-7df38fdd7d55\",\r\n    \"project_uuid\": \"b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d55\",\r\n    \"adjustment_value\": 199.34,\r\n    \"comment\": \"Changed rebate to make more profit\",\r\n    \"price_group_uuid\": \"b5cd5ce6-4c46-1111-a67d-7df38fdd7d77\"\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/adjustments/",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"adjustments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Adjustment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Client",
+						"value": "{{x_client}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{sid}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adjustment_value\": 205.00,\r\n    \"comment\": \"Update rebate to make more profit!!!\"\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/adjustments/69943139-d8e8-469e-8a56-e4bff47058be",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"adjustments",
+						"69943139-d8e8-469e-8a56-e4bff47058be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Adjustments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Client",
+						"value": "{{x_client}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{sid}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"project_uuid\": \"b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d55\"\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/adjustments/mark_adjustments_as_applied/",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"adjustments",
+						"mark_adjustments_as_applied",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_not_applied_overrides",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Client",
+						"value": "{{x_client}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{sid}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"project_uuid\": \"b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d55\"\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/adjustments/mark_adjustments_as_applied/",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"adjustments",
+						"mark_adjustments_as_applied",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Adjustment by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "X-Client",
+						"value": "{{x_client}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{sid}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_uuid\": \"b5cd5ce6-4c46-1111-a67d-7df38fdd7d55\",\r\n    \"bu_uuid\": \"b5cd5ce6-4c46-4e6d-1111-7df38fdd7d55\",\r\n    \"project_uuid\": \"b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d55\",\r\n    \"adjustment_value\": 199.34,\r\n    \"comment\": \"Changed rebate to make more profit\",\r\n    \"price_group_uuid\": \"b5cd5ce6-4c46-1111-a67d-7df38fdd7d77\"\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/adjustments/8d0b6cd6-f39c-4c1c-b4ad-6e0917930844",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"adjustments",
+						"8d0b6cd6-f39c-4c1c-b4ad-6e0917930844"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Adjustment + Filters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "X-Client",
+						"value": "{{x_client}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{sid}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_uuid\": \"b5cd5ce6-4c46-1111-a67d-7df38fdd7d55\",\r\n    \"bu_uuid\": \"b5cd5ce6-4c46-4e6d-1111-7df38fdd7d55\",\r\n    \"project_uuid\": \"b5cd5ce6-4c46-4e6d-a67d-7df38fdd7d55\",\r\n    \"adjustment_value\": 199.34,\r\n    \"comment\": \"Changed rebate to make more profit\",\r\n    \"price_group_uuid\": \"b5cd5ce6-4c46-1111-a67d-7df38fdd7d77\"\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/rfadjustments/v1/adjustments/8d0b6cd6-f39c-4c1c-b4ad-6e0917930844",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"rfadjustments",
+						"v1",
+						"adjustments",
+						"8d0b6cd6-f39c-4c1c-b4ad-6e0917930844"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
